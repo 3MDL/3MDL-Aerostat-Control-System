@@ -10,3 +10,4 @@ The code has been tested on REV C
 ## Functions needed to be implemented ##
 - Low battery cuttoff
 - Power modes?
+- GPS power control on timer like camera
