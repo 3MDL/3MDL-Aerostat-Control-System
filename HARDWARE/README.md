@@ -1,4 +1,4 @@
-# KiCAD Design Docs #
+# Hardware Docs #
 
 ## Load Switch Modules ##
 - Utilize the Fairchild FPF2701MX load switch
