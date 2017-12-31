@@ -1,0 +1,4 @@
+(module "GND VIA" (layer F.Cu) (tedit 588A15DF)
+  (pad 1 thru_hole circle (at 0 1.27) (size 0.6 0.6) (drill 0.4) (layers *.Cu)
+    (zone_connect 2))
+)
