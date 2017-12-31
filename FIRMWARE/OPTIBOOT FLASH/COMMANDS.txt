@@ -1,0 +1,2 @@
+avrdude -p atmega328p -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m -c usbtiny
+avrdude -p atmega328p usbtiny -e -U flash:w:optiboot_pro_8MHz.hex -c usbtiny
