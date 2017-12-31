@@ -1,0 +1,355 @@
+EESchema Schematic File Version 2
+LIBS:Aerostat REV A-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:+11
+LIBS:bmp280
+LIBS:fpf2701mpx
+LIBS:FT230XQ
+LIBS:gp-735t
+LIBS:lm324q
+LIBS:loadswitchmodule
+LIBS:pi_zero_w
+LIBS:ts30011-m033qfnr
+LIBS:ts30011-m050qfnr
+LIBS:voltageregmodule
+LIBS:xbee_pro_s1
+LIBS:Aerostat REV A-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L XBEE_PRO_S1 U9
+U 1 1 595431AE
+P 3750 1650
+F 0 "U9" H 3550 1700 47  0000 C CNN
+F 1 "XBEE_PRO_S1" H 3800 300 47  0000 C CNN
+F 2 "MOD:DIP-20" H 3750 1650 47  0001 C CNN
+F 3 "" H 3750 1650 47  0001 C CNN
+	1    3750 1650
+	1    0    0    -1  
+$EndComp
+Text GLabel 3200 2100 0    47   Input ~ 0
+TX_PI
+Wire Wire Line
+	3200 2100 3300 2100
+Text GLabel 3200 2000 0    47   Output ~ 0
+RX_PI
+Wire Wire Line
+	3200 2000 3300 2000
+NoConn ~ 3300 1850
+Text GLabel 3200 1750 0    47   Input ~ 0
+VCC_XBEE
+Wire Wire Line
+	3200 1750 3300 1750
+$Comp
+L GND #PWR040
+U 1 1 595431BC
+P 3300 2600
+F 0 "#PWR040" H 3300 2350 50  0001 C CNN
+F 1 "GND" H 3300 2450 50  0000 C CNN
+F 2 "" H 3300 2600 50  0000 C CNN
+F 3 "" H 3300 2600 50  0000 C CNN
+	1    3300 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2600 3300 2500
+Text GLabel 3200 2350 0    47   Output ~ 0
+CTS
+Wire Wire Line
+	3200 2350 3300 2350
+NoConn ~ 3300 2250
+NoConn ~ 4250 2700
+NoConn ~ 4250 2900
+Text GLabel 4350 2550 2    47   Output ~ 0
+XBEE_INT
+Wire Wire Line
+	4350 2550 4250 2550
+NoConn ~ 4250 1750
+NoConn ~ 4250 1850
+NoConn ~ 4250 1950
+NoConn ~ 4250 2050
+NoConn ~ 4250 2150
+NoConn ~ 4250 2250
+NoConn ~ 4250 2350
+NoConn ~ 4250 2450
+$Comp
+L BMP280 U10
+U 1 1 595431D3
+P 3750 3800
+F 0 "U10" H 3550 3850 47  0000 C CNN
+F 1 "BMP280" H 3800 3200 47  0000 C CNN
+F 2 "MOD:LGA-8" H 3500 4100 47  0001 C CNN
+F 3 "" H 3500 4100 47  0001 C CNN
+	1    3750 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR041
+U 1 1 595431DA
+P 4250 3800
+F 0 "#PWR041" H 4250 3650 50  0001 C CNN
+F 1 "+3.3V" H 4250 3940 50  0000 C CNN
+F 2 "" H 4250 3800 50  0000 C CNN
+F 3 "" H 4250 3800 50  0000 C CNN
+	1    4250 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3800 4250 4000
+Connection ~ 4250 3900
+$Comp
+L GND #PWR042
+U 1 1 595431E2
+P 4250 4350
+F 0 "#PWR042" H 4250 4100 50  0001 C CNN
+F 1 "GND" H 4250 4200 50  0000 C CNN
+F 2 "" H 4250 4350 50  0000 C CNN
+F 3 "" H 4250 4350 50  0000 C CNN
+	1    4250 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4150 4250 4350
+Connection ~ 4250 4250
+Text GLabel 3200 4250 0    47   Input ~ 0
+SCK
+Wire Wire Line
+	3200 4250 3300 4250
+Text GLabel 3200 3900 0    47   Input ~ 0
+BMP_CSB
+Wire Wire Line
+	3200 3900 3300 3900
+Text GLabel 3200 4150 0    47   BiDi ~ 0
+MOSI
+Text GLabel 3200 4050 0    47   BiDi ~ 0
+MISO
+Wire Wire Line
+	3200 4050 3300 4050
+Wire Wire Line
+	3300 4150 3200 4150
+$Comp
+L GP-735T U11
+U 1 1 595431F2
+P 3850 5250
+F 0 "U11" H 3600 5300 47  0000 C CNN
+F 1 "GP-735T" H 3850 4600 47  0000 C CNN
+F 2 "MOD:GP-735T" H 3850 5250 47  0001 C CNN
+F 3 "" H 3850 5250 47  0001 C CNN
+	1    3850 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR043
+U 1 1 595431FB
+P 3350 5850
+F 0 "#PWR043" H 3350 5600 50  0001 C CNN
+F 1 "GND" H 3350 5700 50  0000 C CNN
+F 2 "" H 3350 5850 50  0000 C CNN
+F 3 "" H 3350 5850 50  0000 C CNN
+	1    3350 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 5850 3350 5750
+Text GLabel 3250 5600 0    47   Input ~ 0
+uMCA_TX
+Text GLabel 3250 5500 0    47   Output ~ 0
+uMCA_RX
+Wire Wire Line
+	3250 5500 3350 5500
+Wire Wire Line
+	3350 5600 3250 5600
+NoConn ~ 4350 5500
+Text GLabel 4450 5600 2    47   Input ~ 0
+GPS_PWR_CTRL
+Wire Wire Line
+	4350 5600 4450 5600
+$Comp
+L CONN_02X08 P4
+U 1 1 5954363B
+P 8650 4100
+F 0 "P4" H 8650 4550 50  0000 C CNN
+F 1 "Multi GPIO" V 8650 4100 50  0000 C CNN
+F 2 "Connect:IDC_Header_Straight_16pins" H 8650 2900 50  0001 C CNN
+F 3 "" H 8650 2900 50  0000 C CNN
+	1    8650 4100
+	1    0    0    -1  
+$EndComp
+Text GLabel 8300 3750 0    47   Input ~ 0
+VCC_uMCA
+Text GLabel 9000 3750 2    47   Input ~ 0
+SELECT
+Text GLabel 8300 3850 0    47   Input ~ 0
+SCROLL_UP
+Text GLabel 9000 3850 2    47   Input ~ 0
+SCROLL_DOWN
+Text GLabel 8300 3950 0    47   Input ~ 0
+TAKE_PICTURE
+$Comp
+L GND #PWR044
+U 1 1 59543647
+P 8300 4450
+F 0 "#PWR044" H 8300 4200 50  0001 C CNN
+F 1 "GND" H 8300 4300 50  0000 C CNN
+F 2 "" H 8300 4450 50  0000 C CNN
+F 3 "" H 8300 4450 50  0000 C CNN
+	1    8300 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 4450 8400 4450
+NoConn ~ 8900 4450
+NoConn ~ 8400 4250
+Text GLabel 8300 4050 0    47   Output ~ 0
+uMCA_TX
+Text GLabel 9000 4050 2    47   Input ~ 0
+uMCA_RX
+Wire Wire Line
+	9000 3850 8900 3850
+Wire Wire Line
+	8900 3750 9000 3750
+Wire Wire Line
+	8300 3750 8400 3750
+Wire Wire Line
+	8300 3850 8400 3850
+Wire Wire Line
+	8400 3950 8300 3950
+Wire Wire Line
+	8300 4050 8400 4050
+Wire Wire Line
+	8900 4050 9000 4050
+Text GLabel 9000 4350 2    47   Input ~ 0
+VCC_GPS
+Wire Wire Line
+	9000 4350 8900 4350
+Text GLabel 8300 4350 0    47   BiDi ~ 0
+VIDEO_GND
+Wire Wire Line
+	8300 4350 8400 4350
+Text GLabel 9000 4250 2    47   Output ~ 0
+VIDEO_OUT
+Wire Wire Line
+	9000 4250 8900 4250
+Text GLabel 8300 4150 0    47   Output ~ 0
+uMCA_BUSY
+Text GLabel 9000 4150 2    47   Output ~ 0
+uMCA_IDLE
+Wire Wire Line
+	9000 4150 8900 4150
+Wire Wire Line
+	8300 4150 8400 4150
+Text GLabel 8500 2250 0    47   Input ~ 0
+VCC_FPV
+$Comp
+L GND #PWR045
+U 1 1 59543ACA
+P 8500 2350
+F 0 "#PWR045" H 8500 2100 50  0001 C CNN
+F 1 "GND" V 8500 2150 50  0000 C CNN
+F 2 "" H 8500 2350 50  0000 C CNN
+F 3 "" H 8500 2350 50  0000 C CNN
+	1    8500 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8500 2350 8600 2350
+Text GLabel 8500 2450 0    47   Input ~ 0
+VIDEO_OUT
+Text GLabel 8500 2550 0    47   BiDi ~ 0
+VIDEO_GND
+$Comp
+L CONN_01X04 P5
+U 1 1 59543AD3
+P 8800 2400
+F 0 "P5" H 8800 2650 50  0000 C CNN
+F 1 "FPV" V 8900 2400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x04" H 8800 2400 50  0001 C CNN
+F 3 "" H 8800 2400 50  0000 C CNN
+	1    8800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2250 8600 2250
+Wire Wire Line
+	8600 2450 8500 2450
+Wire Wire Line
+	8500 2550 8600 2550
+$Comp
+L C C7
+U 1 1 5954AD34
+P 4350 4100
+F 0 "C7" H 4375 4200 50  0000 L CNN
+F 1 "1uF" H 4375 4000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4388 3950 50  0001 C CNN
+F 3 "" H 4350 4100 50  0000 C CNN
+	1    4350 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4250 4350 4250
+Wire Wire Line
+	4350 3950 4350 3900
+Wire Wire Line
+	4350 3900 4250 3900
+Text Notes 3250 6550 0    47   ~ 0
+GPS_PWR_CONTROL ALLOWS ATMEGA TO\nSTART GPS BEFORE THE CAMERA SO THAT\nTHE GPS CAN GET A GPS LOCK WITHOUT \nTHE CAMERA WASTING POWER WAITING.
+Text Notes 3050 3250 0    47   ~ 0
+XBEE_INT IS USED AS AN INTERUPT TO SHOW \nWHEN DATA IS IN SERIAL BUFFER FOR PI
+Text GLabel 4350 2800 2    47   Input ~ 0
+XBEE_SLEEP
+Wire Wire Line
+	4350 2800 4250 2800
+$Comp
+L +3.3V #PWR046
+U 1 1 5963B38C
+P 3350 5250
+F 0 "#PWR046" H 3350 5100 50  0001 C CNN
+F 1 "+3.3V" H 3350 5390 50  0000 C CNN
+F 2 "" H 3350 5250 50  0000 C CNN
+F 3 "" H 3350 5250 50  0000 C CNN
+	1    3350 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 5250 3350 5350
+$EndSCHEMATC

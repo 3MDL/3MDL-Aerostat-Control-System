@@ -1,0 +1,245 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:+11
+LIBS:bmp280
+LIBS:fpf2701mpx
+LIBS:FT230XQ
+LIBS:gp-735t
+LIBS:lm324q
+LIBS:pi_zero_w
+LIBS:ts30011-m033qfnr
+LIBS:ts30011-m050qfnr
+LIBS:xbee_pro_s1
+LIBS:LOAD SWITCH MODULE-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C C2
+U 1 1 59604960
+P 5450 1950
+F 0 "C2" V 5500 1800 50  0000 L CNN
+F 1 "10uF" V 5500 2050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5488 1800 50  0001 C CNN
+F 3 "" H 5450 1950 50  0000 C CNN
+	1    5450 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C1
+U 1 1 59604977
+P 4800 1950
+F 0 "C1" V 4850 2000 50  0000 L CNN
+F 1 "10uF" V 4850 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4838 1800 50  0001 C CNN
+F 3 "" H 4800 1950 50  0000 C CNN
+	1    4800 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L FPF2701MPX U1
+U 1 1 596049A8
+P 5100 2100
+F 0 "U1" H 4900 2100 60  0000 C CNN
+F 1 "FPF2701MPX" H 5125 1325 60  0000 C CNN
+F 2 "Housings_DFN_QFN:DFN-8-1EP_3x3mm_Pitch0.65mm" H 5100 2100 60  0001 C CNN
+F 3 "" H 5100 2100 60  0001 C CNN
+	1    5100 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 59604A5D
+P 4550 2650
+F 0 "R2" V 4630 2650 50  0000 C CNN
+F 1 "R" V 4550 2650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 4480 2650 50  0001 C CNN
+F 3 "" H 4550 2650 50  0000 C CNN
+	1    4550 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 59604A9C
+P 4400 2250
+F 0 "R1" V 4300 2250 50  0000 C CNN
+F 1 "0.01" V 4400 2250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4330 2250 50  0001 C CNN
+F 3 "" H 4400 2250 50  0000 C CNN
+	1    4400 2250
+	0    1    1    0   
+$EndComp
+Text GLabel 4550 2400 0    47   Input ~ 0
+ON
+Wire Wire Line
+	4550 2400 4650 2400
+Text GLabel 4150 2250 0    47   Input ~ 0
+VIN
+Text GLabel 5700 2250 2    47   Output ~ 0
+VOUT
+Wire Wire Line
+	5700 2250 5600 2250
+$Comp
+L GND #PWR01
+U 1 1 59604CB7
+P 4650 2850
+F 0 "#PWR01" H 4650 2600 50  0001 C CNN
+F 1 "GND" H 4650 2700 50  0000 C CNN
+F 2 "" H 4650 2850 50  0000 C CNN
+F 3 "" H 4650 2850 50  0000 C CNN
+	1    4650 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2650 4650 2850
+Connection ~ 4650 2750
+Wire Wire Line
+	4550 2500 4650 2500
+Wire Wire Line
+	4550 2800 4650 2800
+Connection ~ 4650 2800
+Wire Wire Line
+	5600 2250 5600 1950
+Wire Wire Line
+	4650 2250 4650 1950
+Wire Wire Line
+	4950 1950 5300 1950
+$Comp
+L GND #PWR02
+U 1 1 59604F00
+P 5100 1950
+F 0 "#PWR02" H 5100 1700 50  0001 C CNN
+F 1 "GND" H 5100 1800 50  0000 C CNN
+F 2 "" H 5100 1950 50  0000 C CNN
+F 3 "" H 5100 1950 50  0000 C CNN
+	1    5100 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 5100 1950
+NoConn ~ 5600 2400
+NoConn ~ 5600 2500
+Wire Wire Line
+	4150 2250 4250 2250
+Text GLabel 6350 1950 0    47   Output ~ 0
+VIN
+Wire Wire Line
+	6350 1950 6450 1950
+Text GLabel 7150 1950 2    47   Input ~ 0
+VOUT
+Wire Wire Line
+	7150 1950 7050 1950
+Text GLabel 6350 2100 0    47   Output ~ 0
+ON
+Wire Wire Line
+	6350 2100 6450 2100
+$Comp
+L GND #PWR03
+U 1 1 596056A0
+P 7150 2200
+F 0 "#PWR03" H 7150 1950 50  0001 C CNN
+F 1 "GND" H 7150 2050 50  0000 C CNN
+F 2 "" H 7150 2200 50  0000 C CNN
+F 3 "" H 7150 2200 50  0000 C CNN
+	1    7150 2200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L TEST_1P T1
+U 1 1 5960576A
+P 6450 1950
+F 0 "T1" V 6450 2150 50  0000 C CNN
+F 1 "TEST_1P" H 6450 2150 50  0001 C CNN
+F 2 "MOD:CPAD" H 6650 1950 50  0001 C CNN
+F 3 "" H 6650 1950 50  0000 C CNN
+	1    6450 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L TEST_1P T4
+U 1 1 5960589A
+P 7050 1950
+F 0 "T4" V 7050 2150 50  0000 C CNN
+F 1 "TEST_1P" H 7050 2150 50  0001 C CNN
+F 2 "MOD:CPAD" H 7250 1950 50  0001 C CNN
+F 3 "" H 7250 1950 50  0000 C CNN
+	1    7050 1950
+	0    -1   1    0   
+$EndComp
+$Comp
+L TEST_1P T2
+U 1 1 596058CE
+P 6450 2100
+F 0 "T2" V 6450 2300 50  0000 C CNN
+F 1 "TEST_1P" H 6450 2300 50  0001 C CNN
+F 2 "MOD:CPAD" H 6650 2100 50  0001 C CNN
+F 3 "" H 6650 2100 50  0000 C CNN
+	1    6450 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L TEST_1P T3
+U 1 1 59605906
+P 7050 2100
+F 0 "T3" V 7050 2300 50  0000 C CNN
+F 1 "TEST_1P" H 7050 2300 50  0001 C CNN
+F 2 "MOD:CPAD" H 7250 2100 50  0001 C CNN
+F 3 "" H 7250 2100 50  0000 C CNN
+	1    7050 2100
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4550 2250 4650 2250
+Wire Notes Line
+	6450 1900 6450 2150
+Wire Notes Line
+	6450 1900 7050 1900
+Wire Notes Line
+	7050 1900 7050 2150
+Wire Notes Line
+	7050 2150 6450 2150
+Wire Wire Line
+	7150 2200 7150 2100
+Wire Wire Line
+	7150 2100 7050 2100
+Text Notes 6600 1900 0    47   ~ 0
+PINOUT
+$EndSCHEMATC
