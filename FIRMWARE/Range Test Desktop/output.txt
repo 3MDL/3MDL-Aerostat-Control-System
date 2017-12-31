@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "host.py", line 17, in <module>
+    gpsString = receive()
+  File "host.py", line 12, in receive
+    packet = xbee.wait_read_frame()
+  File "/home/luke/.local/lib/python2.7/site-packages/xbee/thread/base.py", line 105, in wait_read_frame
+    frame = self._wait_for_frame()
+  File "/home/luke/.local/lib/python2.7/site-packages/xbee/thread/base.py", line 127, in _wait_for_frame
+    time.sleep(.01)
+KeyboardInterrupt
