@@ -1,8 +1,6 @@
 # Aerostat Control System #
+Remote control system of Tetracam RGB+3 Multispectral camera
 ![image goes here](IMAGES/AEROSTAT.png)
-The code has been tested on REV C
-Updated revision D supports automatic UART selection and numerous hardware updates
-
 ## Funcions currently implemented ##
 - GPS parsing
 - Timer based picture taking with settings via EEPROM
