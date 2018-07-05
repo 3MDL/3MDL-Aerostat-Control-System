@@ -1,5 +1,7 @@
 # Aerostat Control System #
-The code has been tested on REV C 
+![image goes here](IMAGES/AEROSTAT.png)
+The code has been tested on REV C
+Updated revision D supports automatic UART selection and numerous hardware updates
 
 ## Funcions currently implemented ##
 - GPS parsing

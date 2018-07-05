@@ -9,13 +9,6 @@
 - Stability issues on REV B
 - Currently using Recom R-78 Module
 
-## Main Board REV A ##
-- Initial Design using Raspberry Pi Zero W and ATMega328P
-- Raspberry Pi acts as USB host for RGB+3 camera.
-
-## Main Board REV A ##
-- Redesign of REV A that addresses flipped I2C lines
-
 ## Main Board REV C ##
 - Redesign that ditches the Pi and instead only uses the ATMega328P
 - Uses new Recom R-78 buck regulator module
